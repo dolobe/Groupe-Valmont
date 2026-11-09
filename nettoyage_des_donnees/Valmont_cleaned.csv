@@ -30,7 +30,7 @@ R700675,H66,affaires,4,1,19,10,non,direct,133.11,non,5,non,Lille,3 étoiles,261,
 R700361,H51,affaires,3,1,9,1,oui,OTA,128.06,oui,14,non,Strasbourg,3 étoiles,162,8,1.06
 R700686,H70,groupe,2,10,19,4,non,OTA,152.8,non,14,oui,Strasbourg,4 étoiles,216,8,0.82
 R700371,H68,loisir,3,2,22,9,non,OTA,77.31,oui,23,non,Nice,3 étoiles,203,1,6.72
-R700585,H45,loisir,3,2,43,3,oui,entreprise,108.0,oui,7,non,Bordeaux,3 étoiles,215,6,0.79
+R700585,H45,loisir,3,2,43,3,oui,entreprise,108,oui,7,non,Bordeaux,3 étoiles,215,6,0.79
 R700222,H55,loisir,2,3,58,1,non,direct,329.63,oui,19,oui,Bordeaux,5 étoiles,199,4,4.74
 R700171,H47,loisir,6,1,189,7,oui,OTA,90.91,oui,30,oui,Nice,3 étoiles,181,1,2.81
 R700625,H60,loisir,1,1,61,4,oui,agence,115.46,non,4,non,Strasbourg,3 étoiles,94,5,2.97
@@ -40,7 +40,7 @@ R700334,H50,affaires,2,1,19,5,non,direct,153.36,non,12,non,Paris,4 étoiles,134,
 R700499,H59,groupe,4,8,17,11,non,OTA,260.22,oui,10,non,Lyon,5 étoiles,204,1,4.18
 R700623,H55,loisir,4,2,120,1,oui,OTA,346.54,oui,8,non,Bordeaux,5 étoiles,199,4,4.74
 R700683,H68,affaires,5,1,2,11,oui,direct,113.66,oui,13,non,Nice,3 étoiles,203,1,6.72
-R700443,H42,groupe,3,8,93,4,non,entreprise,283.0,oui,6,non,Nice,5 étoiles,339,8,1.76
+R700443,H42,groupe,3,8,93,4,non,entreprise,283,oui,6,non,Nice,5 étoiles,339,8,1.76
 R700339,H59,loisir,5,1,127,1,non,direct,316.84,non,6,oui,Lyon,5 étoiles,204,1,4.18
 R700025,H67,groupe,2,9,32,9,non,entreprise,151.78,non,6,non,Lyon,4 étoiles,57,6,2.32
 R700253,H49,affaires,2,1,11,12,non,OTA,382.93,oui,13,non,Lyon,5 étoiles,312,0,3.18
@@ -52,7 +52,7 @@ R700714,H41,groupe,4,15,69,12,non,entreprise,384.17,oui,4,non,Toulouse,5 étoile
 R700305,H55,groupe,2,10,18,7,oui,direct,423.51,non,18,non,Bordeaux,5 étoiles,199,4,4.74
 R700094,H44,affaires,1,1,4,5,oui,direct,218.69,non,12,non,Paris,4 étoiles,171,0,1.56
 R700419,H70,loisir,3,2,82,8,oui,OTA,207.23,non,11,oui,Strasbourg,4 étoiles,216,8,0.82
-R700435,H67,affaires,3,1,21,2,oui,OTA,140.0,non,13,non,Lyon,4 étoiles,57,6,2.32
+R700435,H67,affaires,3,1,21,2,oui,OTA,140,non,13,non,Lyon,4 étoiles,57,6,2.32
 R700053,H68,groupe,2,10,11,10,non,entreprise,111.67,non,19,non,Nice,3 étoiles,203,1,6.72
 R700026,H53,loisir,4,3,6,9,oui,OTA,355.15,oui,2,non,Marseille,5 étoiles,62,7,2.5
 R700046,H40,affaires,1,1,19,3,oui,direct,191.36,non,9,non,Paris,4 étoiles,231,7,1.27
@@ -69,7 +69,7 @@ R700720,H48,groupe,2,11,97,7,non,OTA,300.78,non,3,non,Strasbourg,5 étoiles,118,
 R700104,H71,affaires,5,1,4,9,non,direct,187.39,non,6,non,Lille,4 étoiles,149,2,1.13
 R700452,H53,groupe,4,14,43,9,non,entreprise,310.24,oui,18,non,Marseille,5 étoiles,62,7,2.5
 R700500,H58,affaires,6,1,9,3,non,agence,144.17,oui,6,non,Lyon,4 étoiles,251,0,2.74
-R700063,H69,affaires,2,1,9,9,oui,direct,126.0,oui,15,non,Paris,3 étoiles,101,1,0.82
+R700063,H69,affaires,2,1,9,9,oui,direct,126,oui,15,non,Paris,3 étoiles,101,1,0.82
 R700513,H52,loisir,2,2,74,11,non,entreprise,70.79,non,12,oui,Marseille,3 étoiles,298,4,3.63
 R700370,H67,loisir,5,2,118,12,non,OTA,158.88,oui,22,non,Lyon,4 étoiles,57,6,2.32
 R700446,H64,loisir,3,1,94,2,non,entreprise,99.41,non,8,oui,Marseille,3 étoiles,294,7,9.81
@@ -108,7 +108,7 @@ R700326,H49,affaires,4,1,8,9,non,OTA,290.82,oui,5,non,Lyon,5 étoiles,312,0,3.18
 R700627,H66,loisir,4,1,159,10,non,agence,51.9,non,8,non,Lille,3 étoiles,261,4,2.19
 R700257,H41,groupe,2,10,126,4,non,OTA,233.69,non,2,oui,Toulouse,5 étoiles,77,7,1.05
 R700395,H61,affaires,3,1,5,7,non,OTA,116.61,non,5,non,Strasbourg,3 étoiles,189,4,4.53
-R700691,H55,groupe,3,16,53,1,non,OTA,284.0,non,3,non,Bordeaux,5 étoiles,199,4,4.74
+R700691,H55,groupe,3,16,53,1,non,OTA,284,non,3,non,Bordeaux,5 étoiles,199,4,4.74
 R700034,H46,loisir,7,1,63,11,non,agence,149.54,oui,8,non,Nantes,4 étoiles,55,8,1.46
 R700202,H59,loisir,4,4,63,8,oui,entreprise,417.31,oui,28,non,Lyon,5 étoiles,204,1,4.18
 R700140,H59,affaires,4,1,5,4,oui,OTA,348.39,oui,14,non,Lyon,5 étoiles,204,1,4.18
@@ -186,7 +186,7 @@ R700795,H65,affaires,3,1,5,12,non,agence,204.14,non,1,oui,Paris,4 étoiles,327,6
 R700245,H65,loisir,3,4,57,10,non,entreprise,185.07,oui,3,non,Paris,4 étoiles,327,6,0.5
 R700485,H68,affaires,3,1,26,1,oui,agence,92.8,oui,11,non,Nice,3 étoiles,203,1,6.72
 R700643,H41,loisir,6,1,215,10,non,agence,274.46,non,25,oui,Toulouse,5 étoiles,77,7,1.05
-R700147,H56,affaires,3,1,4,7,non,OTA,111.0,oui,17,non,Strasbourg,3 étoiles,256,6,0.97
+R700147,H56,affaires,3,1,4,7,non,OTA,111,oui,17,non,Strasbourg,3 étoiles,256,6,0.97
 R700186,H56,affaires,3,1,4,11,oui,direct,115.16,oui,22,non,Strasbourg,3 étoiles,256,6,0.97
 R700473,H54,affaires,4,1,3,1,oui,OTA,211.23,non,1,non,Nantes,4 étoiles,134,8,4.09
 R700351,H58,affaires,2,1,22,7,non,OTA,174.32,oui,13,non,Lyon,4 étoiles,251,0,2.74
@@ -214,7 +214,7 @@ R700518,H67,affaires,2,1,3,10,non,direct,137.1,non,1,oui,Lyon,4 étoiles,57,6,2.
 R700209,H62,affaires,4,1,4,7,non,OTA,104.98,non,1,oui,Bordeaux,3 étoiles,315,3,2.12
 R700642,H71,affaires,3,1,3,4,oui,entreprise,183.23,non,6,non,Lille,4 étoiles,149,2,1.13
 R700142,H44,loisir,2,2,34,11,non,entreprise,136.58,oui,35,non,Paris,4 étoiles,171,0,1.56
-R700740,H46,affaires,3,1,25,6,non,direct,194.0,non,2,non,Nantes,4 étoiles,55,8,1.46
+R700740,H46,affaires,3,1,25,6,non,direct,194,non,2,non,Nantes,4 étoiles,55,8,1.46
 R700618,H52,loisir,2,1,87,6,oui,OTA,119.9,oui,17,non,Marseille,3 étoiles,298,4,3.63
 R700478,H55,affaires,5,1,14,1,non,direct,330.13,oui,10,non,Bordeaux,5 étoiles,199,4,4.74
 R700581,H43,affaires,1,1,18,9,oui,OTA,168.89,oui,13,oui,Marseille,4 étoiles,199,8,6.25
@@ -231,7 +231,7 @@ R700347,H51,affaires,2,1,14,6,oui,direct,145.57,non,3,non,Strasbourg,3 étoiles,
 R700009,H40,loisir,4,3,26,10,oui,OTA,162.15,non,4,oui,Paris,4 étoiles,231,7,1.27
 R700673,H69,affaires,3,1,3,1,non,direct,135.49,non,5,non,Paris,3 étoiles,101,1,0.82
 R700228,H55,affaires,2,1,9,1,oui,direct,404.79,non,5,non,Bordeaux,5 étoiles,199,4,4.74
-R700515,H43,groupe,3,10,52,9,non,OTA,100.0,oui,6,non,Marseille,4 étoiles,199,8,6.25
+R700515,H43,groupe,3,10,52,9,non,OTA,100,oui,6,non,Marseille,4 étoiles,199,8,6.25
 R700736,H59,loisir,1,2,164,1,oui,agence,341.41,non,15,oui,Lyon,5 étoiles,204,1,4.18
 R700752,H69,loisir,4,3,149,8,non,direct,101.3,non,35,non,Paris,3 étoiles,101,1,0.82
 R700403,H55,loisir,3,3,15,2,oui,OTA,340.06,oui,6,oui,Bordeaux,5 étoiles,199,4,4.74
@@ -257,7 +257,7 @@ R700431,H64,loisir,3,1,65,6,non,agence,123.09,non,17,non,Marseille,3 étoiles,29
 R700609,H68,groupe,3,14,73,3,non,OTA,92.81,oui,4,non,Nice,3 étoiles,203,1,6.72
 R700771,H53,loisir,3,4,36,1,non,OTA,324.41,oui,14,non,Marseille,5 étoiles,62,7,2.5
 R700188,H70,groupe,4,10,40,11,non,direct,180.03,non,1,non,Strasbourg,4 étoiles,216,8,0.82
-R700251,H71,groupe,1,10,51,6,non,OTA,150.0,non,16,oui,Lille,4 étoiles,149,2,1.13
+R700251,H71,groupe,1,10,51,6,non,OTA,150,non,16,oui,Lille,4 étoiles,149,2,1.13
 R700729,H70,affaires,3,1,15,5,non,direct,166.97,non,7,non,Strasbourg,4 étoiles,216,8,0.82
 R700318,H59,groupe,4,16,17,4,oui,entreprise,341.01,non,7,non,Lyon,5 étoiles,204,1,4.18
 R700297,H67,groupe,3,12,65,12,non,direct,183.43,oui,13,non,Lyon,4 étoiles,57,6,2.32
@@ -350,7 +350,7 @@ R700062,H57,loisir,3,2,52,3,oui,entreprise,112.84,oui,6,oui,Toulouse,3 étoiles,
 R700708,H61,affaires,2,1,18,4,non,OTA,67.72,non,10,non,Strasbourg,3 étoiles,189,4,4.53
 R700388,H49,loisir,3,3,180,11,non,entreprise,311.78,non,10,oui,Lyon,5 étoiles,312,0,3.18
 R700058,H68,groupe,2,14,25,7,non,OTA,110.5,oui,9,non,Nice,3 étoiles,203,1,6.72
-R700223,H46,groupe,2,18,43,3,non,agence,147.0,oui,1,oui,Nantes,4 étoiles,55,8,1.46
+R700223,H46,groupe,2,18,43,3,non,agence,147,oui,1,oui,Nantes,4 étoiles,55,8,1.46
 R700492,H60,groupe,3,14,125,3,non,OTA,64.53,oui,7,non,Strasbourg,3 étoiles,94,5,2.97
 R700672,H55,loisir,2,1,54,4,oui,agence,361.13,oui,21,oui,Bordeaux,5 étoiles,199,4,4.74
 R700221,H42,loisir,4,3,6,10,non,direct,340.82,non,2,non,Nice,5 étoiles,339,8,1.76
@@ -360,7 +360,7 @@ R700052,H67,groupe,2,9,60,12,non,direct,190.31,oui,4,oui,Lyon,4 étoiles,57,6,2.
 R700017,H50,affaires,1,1,6,12,non,agence,186.52,non,17,non,Paris,4 étoiles,134,7,1.76
 R700693,H50,loisir,5,2,63,11,non,OTA,139.89,non,23,oui,Paris,4 étoiles,134,7,1.76
 R700306,H40,groupe,2,12,10,6,non,entreprise,201.31,oui,8,non,Paris,4 étoiles,231,7,1.27
-R700155,H70,affaires,1,1,10,1,non,OTA,154.0,non,22,oui,Strasbourg,4 étoiles,216,8,0.82
+R700155,H70,affaires,1,1,10,1,non,OTA,154,non,22,oui,Strasbourg,4 étoiles,216,8,0.82
 R700411,H68,loisir,2,2,30,3,non,agence,115.48,non,14,oui,Nice,3 étoiles,203,1,6.72
 R700632,H41,loisir,4,2,93,5,non,direct,316.84,oui,1,non,Toulouse,5 étoiles,77,7,1.05
 R700249,H54,groupe,3,16,182,5,non,direct,92.1,non,11,oui,Nantes,4 étoiles,134,8,4.09
@@ -384,7 +384,7 @@ R700200,H70,loisir,3,1,29,11,non,OTA,128.92,non,7,oui,Strasbourg,4 étoiles,216,
 R700385,H71,affaires,2,1,22,8,non,direct,189.29,oui,4,oui,Lille,4 étoiles,149,2,1.13
 R700780,H63,loisir,5,3,8,5,non,direct,313.94,oui,8,oui,Strasbourg,5 étoiles,106,6,4.14
 R700590,H47,affaires,2,1,8,11,oui,entreprise,105.06,non,21,non,Nice,3 étoiles,181,1,2.81
-R700742,H51,affaires,2,1,0,3,non,OTA,128.0,oui,6,non,Strasbourg,3 étoiles,162,8,1.06
+R700742,H51,affaires,2,1,0,3,non,OTA,128,oui,6,non,Strasbourg,3 étoiles,162,8,1.06
 R700484,H66,affaires,2,1,1,7,non,direct,152.3,non,18,non,Lille,3 étoiles,261,4,2.19
 R700570,H59,loisir,3,1,101,2,oui,OTA,344.43,oui,39,non,Lyon,5 étoiles,204,1,4.18
 R700280,H55,affaires,2,1,15,7,non,OTA,384.69,non,5,non,Bordeaux,5 étoiles,199,4,4.74
@@ -409,7 +409,7 @@ R700543,H52,affaires,2,1,5,5,non,OTA,123.06,oui,7,oui,Marseille,3 étoiles,298,4
 R700528,H60,loisir,1,1,66,6,non,agence,108.85,oui,17,non,Strasbourg,3 étoiles,94,5,2.97
 R700262,H43,affaires,1,1,4,4,oui,OTA,183.62,non,4,non,Marseille,4 étoiles,199,8,6.25
 R700082,H50,groupe,4,7,53,9,non,OTA,143.04,oui,3,non,Paris,4 étoiles,134,7,1.76
-R700526,H54,loisir,4,2,63,9,non,entreprise,174.0,non,3,non,Nantes,4 étoiles,134,8,4.09
+R700526,H54,loisir,4,2,63,9,non,entreprise,174,non,3,non,Nantes,4 étoiles,134,8,4.09
 R700407,H40,loisir,6,3,105,8,non,OTA,168.55,non,10,oui,Paris,4 étoiles,231,7,1.27
 R700677,H52,loisir,4,3,47,12,oui,OTA,133.29,non,12,non,Marseille,3 étoiles,298,4,3.63
 R700507,H42,affaires,2,1,6,4,non,OTA,318.08,oui,8,non,Nice,5 étoiles,339,8,1.76
@@ -449,7 +449,7 @@ R700304,H53,loisir,3,3,39,8,non,OTA,382.9,non,5,non,Marseille,5 étoiles,62,7,2.
 R700031,H67,groupe,6,16,18,12,non,OTA,161.6,oui,13,non,Lyon,4 étoiles,57,6,2.32
 R700567,H43,affaires,2,1,14,2,oui,OTA,168.7,oui,6,non,Marseille,4 étoiles,199,8,6.25
 R700172,H66,affaires,3,1,8,3,non,OTA,121.21,oui,16,non,Lille,3 étoiles,261,4,2.19
-R700284,H44,groupe,3,11,73,12,non,OTA,157.0,oui,13,oui,Paris,4 étoiles,171,0,1.56
+R700284,H44,groupe,3,11,73,12,non,OTA,157,oui,13,oui,Paris,4 étoiles,171,0,1.56
 R700341,H62,loisir,7,2,85,11,non,entreprise,90.47,oui,9,non,Bordeaux,3 étoiles,315,3,2.12
 R700240,H51,loisir,5,1,28,2,non,direct,83.78,non,8,non,Strasbourg,3 étoiles,162,8,1.06
 R700174,H61,groupe,1,6,67,9,non,direct,67.85,non,9,oui,Strasbourg,3 étoiles,189,4,4.53
