@@ -48,8 +48,14 @@ df_clean = df[(df['prix_nuit_eur'] > 0) & (df['nb_nuits'] <= 30)].copy()
 print("Nombre de réservations écartées :", len(df) - len(df_clean))
 print("Nombre de réservations gardées :", len(df_clean))
 
+#6. Q9 (les réservations anormales à bloquer)
+dossiers_aberrants = (df['prix_nuit_eur'] <= 0) | (df['nb_nuits'] > 30)
 
-# 6. Convertir les colonnes de comptage en entiers propres
+print("\n--- RÉPONSE QUESTION 9 : Dossiers anormaux par mois ---")
+print(df[dossiers_aberrants].groupby("mois_sejour").size())
+
+
+# 7. Convertir les colonnes de comptage en entiers propres
 
 df_clean['nb_personnes'] = df_clean['nb_personnes'].astype(int)
 
@@ -61,9 +67,9 @@ print("Conversion des colonnes terminée !")
 print(df_clean[['nb_personnes', 'delai_reservation_j', 'nuitees_cumulees_client']].dtypes)
 
 
-# 7. Sauvegarder le fichier propre
+# 8. Sauvegarder le fichier propre
 
 df_clean.to_csv('Valmont_cleaned.csv', index=False)
 
 print("Le fichier propre a bien été enregistré !")
-print(f"Nettoyage terminé ! Il reste {len(df_clean)} réservations.")
+print(f"Nettoyage terminé  Il reste {len(df_clean)} réservations.")
