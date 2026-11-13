@@ -5,7 +5,6 @@ import pandas as pd
 reservations = pd.read_csv('Valmont_reservations.csv')
 hotels = pd.read_csv('Valmont_hotels.csv')
 
-print("Fichiers chargés !")
 print("Nombre de réservations :", len(reservations))
 print("Nombre d'hôtels :", len(hotels))
 
@@ -24,7 +23,6 @@ print("Nombre de doublons trouvés :", df.duplicated(subset=['reservation_id']).
 
 df = df.drop_duplicates(subset=['reservation_id'])
 
-print("Doublons supprimés !")
 print("Nombre de lignes restantes :", len(df))
 
 
@@ -37,7 +35,6 @@ df['nb_personnes'] = df['nb_personnes'].fillna(df['nb_personnes'].median())
 
 df['petit_dejeuner'] = df['petit_dejeuner'].fillna(df['petit_dejeuner'].mode()[0])
 
-print("Valeurs manquantes après le remplacement :")
 print(df[['nb_personnes', 'petit_dejeuner']].isna().sum())
 
 
@@ -63,7 +60,6 @@ df_clean['delai_reservation_j'] = df_clean['delai_reservation_j'].astype(int)
 
 df_clean['nuitees_cumulees_client'] = df_clean['nuitees_cumulees_client'].astype(int)
 
-print("Conversion des colonnes terminée !")
 print(df_clean[['nb_personnes', 'delai_reservation_j', 'nuitees_cumulees_client']].dtypes)
 
 
@@ -71,5 +67,4 @@ print(df_clean[['nb_personnes', 'delai_reservation_j', 'nuitees_cumulees_client'
 
 df_clean.to_csv('Valmont_cleaned.csv', index=False)
 
-print("Le fichier propre a bien été enregistré !")
 print(f"Nettoyage terminé  Il reste {len(df_clean)} réservations.")
