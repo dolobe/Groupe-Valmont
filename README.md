@@ -3,7 +3,7 @@
 ### Tache:
 
 
-##Tâche 1 : Nettoyage des fichiers, gestion des valeurs bizarres et Q9 (les réservations anormales à bloquer)
+# Tâche 1 : Nettoyage des données 
 
 Cette tâche consiste à nettoyer et préparer les données de réservation et les informations hôtelières du projet Valmont afin de disposer d'un jeu de données fiable pour les prochaines étapes du projet.
 
@@ -36,13 +36,6 @@ Le script a identifié un total de **6 dossiers anormaux**, dont la répartition
 * **Mois 6 :** 1 dossier
 
 *(Aucune anomalie sur les autres mois).* Cela montre qu'il s'agit d'erreurs humaines de saisie ponctuelles et non d'un problème saisonnier.
-
-
-
-
-
-
-
 
 
 Tâche 2 : Analyse des annulations et des délais (Q1 et Q2)
