@@ -1,9 +1,9 @@
 # Groupe-Valmont
 
-## Tache:
+### Tache:
 
 
-Tâche 1 : Nettoyage des fichiers, gestion des valeurs bizarres et Q9 (les réservations anormales à bloquer)
+##Tâche 1 : Nettoyage des fichiers, gestion des valeurs bizarres et Q9 (les réservations anormales à bloquer)
 
 Cette tâche consiste à nettoyer et préparer les données de réservation et les informations hôtelières du projet Valmont afin de disposer d'un jeu de données fiable pour les prochaines étapes du projet.
 
