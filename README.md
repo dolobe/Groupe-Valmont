@@ -25,7 +25,7 @@ Le script réalise un pipeline complet de préparation des données en plusieurs
 ## 2. Réponse à la Question 9
 
 ### A. Faut-il les bloquer avant confirmation ?
-**Oui, de manière impérative.** Il faut mettre en place des filtres automatiques sur le système de réservation en amont pour empêcher la validation de tarifs nuls/négatifs ou de séjours supérieurs à 30 nuits, évitant ainsi les erreurs de planning et les pertes financières.
+**Oui, de manière impérative.** Il faut mettre en place des filtres automatiques sur le système de réservation en amont pour empêcher la validation de tarifs nuls/négatifs , de séjours supérieurs à 30 nuits ou d'un nombre de personnes incohérent, évitant ainsi les erreurs de planning et les pertes financières.
 
 ### B. Nombre de dossiers anormaux par mois
 Le script a identifié un total de **6 dossiers anormaux**, dont la répartition mensuelle affichée dans le terminal est la suivante :
