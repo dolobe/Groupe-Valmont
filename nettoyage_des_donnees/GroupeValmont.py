@@ -43,13 +43,13 @@ print(df[['nb_personnes', 'petit_dejeuner']].isna().sum())
 
 # 5. Supprimer les valeurs aberrantes
 
-df_clean = df[(df['prix_nuit_eur'] > 0) & (df['nb_nuits'] <= 30)].copy()
+df_clean = df[(df['prix_nuit_eur'] > 0) & (df['nb_nuits'] <= 30) & (df['nb_personnes'] > 0 )].copy()
 
 print("Nombre de réservations écartées :", len(df) - len(df_clean))
 print("Nombre de réservations gardées :", len(df_clean))
 
 #6. Q9 (les réservations anormales à bloquer)
-dossiers_aberrants = (df['prix_nuit_eur'] <= 0) | (df['nb_nuits'] > 30)
+dossiers_aberrants = (df['prix_nuit_eur'] <= 0) | (df['nb_nuits'] > 30) | (df['nb_personnes'] <= 0)
 
 print("\n--- RÉPONSE QUESTION 9 : Dossiers anormaux par mois ---")
 print(df[dossiers_aberrants].groupby("mois_sejour").size())
