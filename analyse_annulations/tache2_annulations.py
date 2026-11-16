@@ -11,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier, export_text
 from sklearn.metrics import roc_auc_score
 
-df = pd.read_csv("Valmont_cleaned.csv")
+df = pd.read_csv("./data/Valmont_cleaned.csv")
 df["y"] = (df["a_annule"] == "oui").astype(int)          # 1 = annulée
 print("Taux global d'annulation :", round(df.y.mean(), 3), "| n =", len(df))
 
@@ -96,7 +96,7 @@ for a, c, t in zip(ax, ["canal", "segment_declare"], ["Par canal de vente", "Par
     for i, v in enumerate(s.values): a.text(i, v + .6, f"{v:.0f} %", ha="center")
     a.set_title(t)
 ax[0].set_ylabel("Taux d'annulation (%)"); ax[1].text(2.45, glob + .6, "moyenne", color="red", ha="right", fontsize=9)
-plt.tight_layout(); plt.savefig("graph1_canal_segment.png", dpi=150); plt.close()
+plt.tight_layout(); plt.savefig("./images/graph1_canal_segment.png", dpi=150); plt.close()
 # Graphique 2 (délai)
 fig, ax = plt.subplots(figsize=(7.5, 4.2))
 v = tab.taux.values * 100
@@ -105,5 +105,5 @@ ax.axhline(glob, color="red", ls="--", lw=1)
 for i, (x, n) in enumerate(zip(v, tab.effectif)): ax.text(i, x + .8, f"{x:.0f} %\n(n={n})", ha="center", fontsize=9)
 ax.set_ylim(0, 60); ax.set_xlabel("Délai entre réservation et séjour"); ax.set_ylabel("Taux d'annulation (%)")
 ax.set_title("Plus on réserve tôt, plus on annule")
-plt.tight_layout(); plt.savefig("graph2_delai.png", dpi=150); plt.close()
+plt.tight_layout(); plt.savefig("./images/graph2_delai.png", dpi=150); plt.close()
 print("\nGraphiques enregistrés.")

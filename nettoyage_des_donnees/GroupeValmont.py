@@ -2,12 +2,11 @@ import pandas as pd
 
 # 1. Charger les fichiers d'origine
 
-reservations = pd.read_csv('Valmont_reservations.csv')
-hotels = pd.read_csv('Valmont_hotels.csv')
+reservations = pd.read_csv('./data/Valmont_reservations.csv')
+hotels = pd.read_csv('./data/Valmont_hotels.csv')
 
 print("Nombre de réservations :", len(reservations))
 print("Nombre d'hôtels :", len(hotels))
-
 
 # 2. Fusionner les deux tables
 
@@ -65,6 +64,6 @@ print(df_clean[['nb_personnes', 'delai_reservation_j', 'nuitees_cumulees_client'
 
 # 8. Sauvegarder le fichier propre
 
-df_clean.to_csv('Valmont_cleaned.csv', index=False)
+df_clean.to_csv('./data/Valmont_cleaned.csv', index=False)
 
 print(f"Nettoyage terminé  Il reste {len(df_clean)} réservations.")
