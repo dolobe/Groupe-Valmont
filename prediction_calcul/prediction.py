@@ -29,15 +29,30 @@ variables = [
 X = pd.get_dummies(df[variables], drop_first=True)
 y = df["y"]
 
-# Régression logistique
+# 1. Régression logistique
 modele_log = LogisticRegression(max_iter=1000).fit(X, y)
 proba_log = modele_log.predict_proba(X)[:, 1]
-print("AUC Régression logistique :", round(roc_auc_score(y, proba_log), 3))
+pred_log = (proba_log >= 0.5).astype(int)
 
-# Arbre de décision
+print("=== RÉGRESSION LOGISTIQUE ===")
+print("AUC :", round(roc_auc_score(y, proba_log), 3))
+print("Exactitude (accuracy) :", round(accuracy_score(y, pred_log), 3))
+print("Matrice de confusion :\n", confusion_matrix(y, pred_log))
+print(classification_report(y, pred_log, target_names=["honoree", "annulee"]))
+print("Coefficients (+ = augmente risque annulation, - = diminue) :")
+print(pd.Series(modele_log.coef_[0], index=X.columns).round(3).sort_values())
+
+# 2. Arbre de décision
 arbre = DecisionTreeClassifier(max_depth=3, min_samples_leaf=30, random_state=42).fit(X, y)
 proba_arbre = arbre.predict_proba(X)[:, 1]
-print("AUC Arbre de décision     :", round(roc_auc_score(y, proba_arbre), 3))
+pred_arbre = (proba_arbre >= 0.5).astype(int)
+
+print("\n=== ARBRE DE DÉCISION ===")
+print("AUC :", round(roc_auc_score(y, proba_arbre), 3))
+print("Exactitude (accuracy) :", round(accuracy_score(y, pred_arbre), 3))
+print("Matrice de confusion :\n", confusion_matrix(y, pred_arbre))
+print("Variables les plus importantes :")
+print(pd.Series(arbre.feature_importances_, index=X.columns).round(3).sort_values(ascending=False))
 print("\nRègles de l'arbre :")
 print(export_text(arbre, feature_names=list(X.columns)))
 
