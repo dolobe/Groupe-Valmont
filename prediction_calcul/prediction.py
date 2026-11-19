@@ -5,7 +5,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import binom 
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+    roc_auc_score,
+)
 from sklearn.tree import DecisionTreeClassifier, export_text    
 
 os.makedirs("./images", exist_ok=True)
