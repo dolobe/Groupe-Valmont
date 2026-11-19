@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 # Chargement du fichier Valmont_cleaned.csv et la table des hotels
-df_clean = pd.read_csv("nettoyage_des_donnees/Valmont_cleaned.csv")
-df_hot = pd.read_csv("nettoyage_des_donnees/Valmont_hotels.csv")
+df_clean = pd.read_csv("./data/Valmont_cleaned.csv")
+df_hot = pd.read_csv("./data/Valmont_hotels.csv")
 
 print(f"Lignes chargées depuis Valmont_cleaned.csv : {len(df_clean)}")
 print("Colonnes disponibles :", df_clean.columns.tolist())
