@@ -52,7 +52,7 @@ Pour le segment, les directeurs ont l'air d'avoir raison à première vue, puisq
 
 Ce qui distingue vraiment une réservation annulée, c'est le délai de réservation, on a 52 jours en médiane pour les annulées, contre 22 pour les honorées. Le week-end, le petit-déjeuner, la catégorie de l'hôtel, le mois du séjour et le prix n'ont aucun lien avec l'annulation.
 
-![Taux d'annulation par canal et par segment](graph1_canal_segment.png)
+![Taux d'annulation par canal et par segment](analyse_annulations/graph1_canal_segment.png)
 
 ## Q2) Un client qui réserve tôt est-il un client sûr ?
 
@@ -69,7 +69,7 @@ Non, les données montrent l'inverse. Plus on réserve tôt, plus on annule.
 
 Au-delà de 90 jours, une réservation sur deux est annulée. Dans la régression, chaque tranche de 10 jours de délai en plus augmente les chances d'annulation d'environ 12 %. Les clients les plus fiables sont donc ceux qui réservent peu de temps avant leur séjour.
 
-![Taux d'annulation selon le délai de réservation](graph2_delai.png)
+![Taux d'annulation selon le délai de réservation](analyse_annulations/graph2_delai.png)
 
 ## Pourquoi ces méthodes
 
