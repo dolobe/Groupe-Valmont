@@ -97,4 +97,17 @@ Tâche 4 : Modèle de prix et test de robustesse en haute saison (Q3 et Q4)
 
 Tâche 5 : Prédiction des annulations et calcul de l'overbooking (Q5 et Q6)
 
+Réponse à la Question 5 et à la Question 6 (Score de risque et surréservation)
+Méthode retenue et justification : K plus proches voisins (KNeighborsClassifier) encapsulé
+dans un make_pipeline(StandardScaler(), ...) avec optimisation de k par validation
+croisée stratifiée (StratifiedKFold). Le pipeline empêche toute fuite de données lors de la
+standardisation, et predict_proba() estime le risque individuel dès la réservation.
+
+Règle d'overbooking (Q6) : Un client refusé à l'arrivée coûte nettement plus cher qu'une chambre
+vide. Bien que le taux moyen d'annulation soit de 26,1 %, nous appliquons une règle prudente basée
+sur le plancher d'annulation (15 %) divisé par deux, soit un plafond maximal de 8 % de
+surréservation par établissement (activé uniquement lorsque le carnet contient des réservations
+prises à plus de 30 jours). Pour un hôtel de 188 chambres, cela autorise au maximum 15 chambres
+surréservées
+
 Tâche 6 : Politique tarifaire, services inclus et chiffrage des gains sur les chambres vides (fin de la Q8)
