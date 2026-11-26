@@ -13,6 +13,7 @@ print("Nombre d'hôtels :", len(hotels))
 
 df = pd.merge(reservations, hotels, on='hotel_id', how='left')
 
+print("Les deux fichiers ont été fusionnés.")
 print("Nombre de lignes après la fusion :", len(df))
 
 
@@ -39,13 +40,19 @@ print(df[['nb_personnes', 'petit_dejeuner']].isna().sum())
 
 # 5. Supprimer les valeurs aberrantes
 
-df_clean = df[(df['prix_nuit_eur'] > 0) & (df['nb_nuits'] <= 30)].copy()
+df_clean = df[(df['prix_nuit_eur'] > 0) & (df['nb_nuits'] <= 30) & (df['nb_personnes'] > 0 )].copy()
 
 print("Nombre de réservations écartées :", len(df) - len(df_clean))
 print("Nombre de réservations gardées :", len(df_clean))
 
+#6. Q9 (les réservations anormales à bloquer)
+dossiers_aberrants = (df['prix_nuit_eur'] <= 0) | (df['nb_nuits'] > 30) | (df['nb_personnes'] <= 0)
 
-# 6. Convertir les colonnes de comptage en entiers propres
+print("\n--- RÉPONSE QUESTION 9 : Dossiers anormaux par mois ---")
+print(df[dossiers_aberrants].groupby("mois_sejour").size())
+
+
+# 7. Convertir les colonnes de comptage en entiers propres
 
 df_clean['nb_personnes'] = df_clean['nb_personnes'].astype(int)
 
@@ -56,8 +63,8 @@ df_clean['nuitees_cumulees_client'] = df_clean['nuitees_cumulees_client'].astype
 print(df_clean[['nb_personnes', 'delai_reservation_j', 'nuitees_cumulees_client']].dtypes)
 
 
-# 7. Sauvegarder le fichier propre
+# 8. Sauvegarder le fichier propre
 
 df_clean.to_csv('Valmont_cleaned.csv', index=False)
 
-print(f"Nettoyage terminé Il reste {len(df_clean)} réservations.")
+print(f"Nettoyage terminé  Il reste {len(df_clean)} réservations.")
