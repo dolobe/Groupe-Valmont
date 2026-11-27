@@ -58,3 +58,18 @@ for nom, part in [("prudent", 0.2), ("moyen", 0.35), ("optimiste", 0.5)]:
     cout_remise = ca_30j_honore * part * remise
     gain_net = perte_30j * part - cout_remise
     print(nom, ": gain net =", round(gain_net), "€ (coût de la remise :", round(cout_remise), "€)")
+
+    # Question G : portrait de chaque type de séjour (segments de la tâche 3, djene)
+seg = pd.read_csv("segmentation_clients/Valmont_with_clusters.csv")
+seg["annule"] = seg["a_annule"] == "oui"
+seg["montant"] = seg["nb_nuits"] * seg["prix_nuit_eur"]
+seg["plus_30j"] = seg["delai_reservation_j"] > 30
+
+portrait = seg.groupby("nom_segment").agg(
+    reservations=("annule", "size"),
+    taux_annulation=("annule", "mean"),
+    prix_median=("prix_nuit_eur", "median"),
+    part_plus_30j=("plus_30j", "mean"),
+)
+portrait["perte_eur"] = seg[seg["annule"]].groupby("nom_segment")["montant"].sum().round()
+print(portrait.round(2).sort_values("perte_eur", ascending=False))
