@@ -95,3 +95,16 @@ for nom in seg["nom_segment"].unique():
 gains = pd.DataFrame(resultats, columns=["type", "recupere", "cout_remise", "gain_net"])
 print(gains.sort_values("gain_net", ascending=False))
 print("Gain net total :", gains["gain_net"].sum(), "€")
+
+# Question I : gain si le petit-déjeuner devient payant pour les Voyageurs Économiques
+prix_pdj = 12  # hypothèse : prix par personne et par nuit (hôtels 3-4 étoiles)
+
+eco = seg[(seg["nom_segment"] == "Voyageurs Économiques")
+          & (seg["petit_dejeuner"] == "oui")
+          & ~seg["annule"]]
+nb_pdj = (eco["nb_nuits"] * eco["nb_personnes"]).sum()
+print("Petits-déjeuners servis aux Voyageurs Économiques :", nb_pdj)
+
+# Hypothèse : une partie des clients renonce au petit-déjeuner s'il devient payant
+for nom, garde in [("prudent", 0.3), ("moyen", 0.5), ("optimiste", 0.7)]:
+    print(nom, ":", round(nb_pdj * garde * prix_pdj), "€ de recettes petit-déjeuner")
