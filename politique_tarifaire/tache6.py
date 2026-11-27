@@ -37,3 +37,12 @@ resume = df.groupby("tranche_delai", observed=True).agg(
 )
 resume["perte_eur"] = df[df["annule"]].groupby("tranche_delai", observed=True)["montant"].sum().round()
 print(resume)
+
+# Question E : gain estimé de la politique d'annulation
+# Pertes sur les réservations faites plus de 30 jours avant
+perte_30j = df[df["annule"] & (df["delai_reservation_j"] > 30)]["montant"].sum()
+print("Perte sur les réservations à plus de 30 jours :", round(perte_30j), "€")
+
+# Hypothèses : part de cette perte récupérée grâce au tarif non remboursable
+for nom, part in [("prudent", 0.2), ("moyen", 0.35), ("optimiste", 0.5)]:
+    print(nom, ":", round(perte_30j * part), "€ récupérés")
