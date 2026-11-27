@@ -73,3 +73,25 @@ portrait = seg.groupby("nom_segment").agg(
 )
 portrait["perte_eur"] = seg[seg["annule"]].groupby("nom_segment")["montant"].sum().round()
 print(portrait.round(2).sort_values("perte_eur", ascending=False))
+
+# Question H : gain net par type de séjour (scénario moyen)
+# On durcit les conditions seulement pour les types à risque ;
+# Voyageurs Économiques et Clients Fidèles gardent l'annulation gratuite
+types_concernes = ["Planificateurs Anticipés", "Clientèle Premium",
+                   "Groupes & Séminaires", "Longs Séjours"]
+part = 0.35     # hypothèse du scénario moyen
+remise = 0.10   # remise du tarif non remboursable
+
+resultats = []
+for nom in seg["nom_segment"].unique():
+    s = seg[(seg["nom_segment"] == nom) & seg["plus_30j"]]
+    if nom in types_concernes:
+        recupere = s[s["annule"]]["montant"].sum() * part
+        cout = s[~s["annule"]]["montant"].sum() * part * remise
+    else:
+        recupere, cout = 0, 0
+    resultats.append([nom, round(recupere), round(cout), round(recupere - cout)])
+
+gains = pd.DataFrame(resultats, columns=["type", "recupere", "cout_remise", "gain_net"])
+print(gains.sort_values("gain_net", ascending=False))
+print("Gain net total :", gains["gain_net"].sum(), "€")
