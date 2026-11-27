@@ -46,3 +46,15 @@ print("Perte sur les réservations à plus de 30 jours :", round(perte_30j), "�
 # Hypothèses : part de cette perte récupérée grâce au tarif non remboursable
 for nom, part in [("prudent", 0.2), ("moyen", 0.35), ("optimiste", 0.5)]:
     print(nom, ":", round(perte_30j * part), "€ récupérés")
+
+    # Question F : coût de la remise de 10 % et gain net
+# Réservations à plus de 30 jours qui n'ont PAS été annulées
+# (elles auraient payé quand même, donc la remise est une perte pour l'hôtel)
+ca_30j_honore = df[~df["annule"] & (df["delai_reservation_j"] > 30)]["montant"].sum()
+remise = 0.10
+
+for nom, part in [("prudent", 0.2), ("moyen", 0.35), ("optimiste", 0.5)]:
+    # Hypothèse : la même part de clients choisit le tarif non remboursable
+    cout_remise = ca_30j_honore * part * remise
+    gain_net = perte_30j * part - cout_remise
+    print(nom, ": gain net =", round(gain_net), "€ (coût de la remise :", round(cout_remise), "€)")
